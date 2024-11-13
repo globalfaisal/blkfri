@@ -6,21 +6,50 @@
     "dev": "next dev --turbopack",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "lint:fix": "eslint src --fix && pnpm format",
+    "format": "prettier --write .",
+    "typecheck": "tsc --noEmit --incremental false",
+    "prepare": "husky"
   },
   "dependencies": {
+    "@clerk/nextjs": "^6.3.2",
+    "@sanity/icons": "^3.4.0",
+    "@sanity/image-url": "1",
+    "@sanity/vision": "3",
+    "next": "15.0.3",
+    "next-sanity": "9",
     "react": "19.0.0-rc-66855b96-20241106",
     "react-dom": "19.0.0-rc-66855b96-20241106",
-    "next": "15.0.3"
+    "sanity": "3",
+    "styled-components": "6"
   },
   "devDependencies": {
-    "typescript": "^5",
     "@types/node": "^20",
     "@types/react": "^18",
     "@types/react-dom": "^18",
-    "postcss": "^8",
-    "tailwindcss": "^3.4.1",
+    "@typescript-eslint/eslint-plugin": "^8.14.0",
+    "@typescript-eslint/parser": "^8.14.0",
     "eslint": "^8",
-    "eslint-config-next": "15.0.3"
+    "eslint-config-next": "15.0.3",
+    "eslint-config-prettier": "^9.1.0",
+    "eslint-plugin-prettier": "^5.2.1",
+    "eslint-plugin-simple-import-sort": "^12.1.1",
+    "eslint-plugin-tailwindcss": "^3.17.5",
+    "eslint-plugin-unused-imports": "^4.1.4",
+    "husky": "^9.1.6",
+    "lint-staged": "^15.2.10",
+    "postcss": "^8",
+    "prettier": "^3.3.3",
+    "prettier-plugin-tailwindcss": "^0.6.8",
+    "tailwindcss": "^3.4.1",
+    "tsc-files": "^1.1.4",
+    "typescript": "^5"
+  },
+  "engines": {
+    "node": ">=20",
+    "pnpm": ">=9",
+    "npm": "Please use pnpm instead of npm",
+    "yarn": "Please use pnpm instead of yarn"
   }
 }

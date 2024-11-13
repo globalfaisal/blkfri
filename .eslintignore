@@ -1,0 +1,7 @@
+coverage
+public
+dist
+.vscode
+.idea
+node_modules
+pnpm-lock.yaml
